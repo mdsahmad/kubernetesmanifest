@@ -19,7 +19,7 @@ node {
                         bat "sed -i \'s+raj80dockerid/test.*+raj80dockerid/test:${env.BUILD_NUMBER}+g\' deployment.yaml"
                         bat 'cat deployment.yaml'
                         bat 'git add .'
-                        bat 'git commit -m \'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'
+                        bat 'git commit -m "Done by Jenkins Job changemanifest"'
                         bat 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main'
       }
     }
