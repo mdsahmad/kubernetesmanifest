@@ -14,7 +14,7 @@ node {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         bat "git config user.email mdshahid.ahmad@outlook.com"
                         bat "git config user.name mdsahmad"
-                        bat 'echo "${DOCKERTAG}"'
+                        echo ${DOCKERTAG}
                         //sh "git switch master"
                         bat "cat deployment.yaml"
                         bat "sed -i 's+raj80dockerid/test.*+raj80dockerid/test:${DOCKERTAG}+g' deployment.yaml"
