@@ -16,11 +16,11 @@ node {
                         bat 'git config user.name mdsahmad'
                         //sh "git switch master"
                         bat 'cat deployment.yaml'
-                        bat "sed -i 's+raj80dockerid/test.*+raj80dockerid/test:${env.BUILD_NUMBER}+g' deployment.yaml"
-                        bat "cat deployment.yaml"
-                        bat "git add ."
-                        bat "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
-                        bat "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main"
+                        bat 'sed -i \'s+raj80dockerid/test.*+raj80dockerid/test:${env.BUILD_NUMBER}+g\' deployment.yaml'
+                        bat 'cat deployment.yaml'
+                        bat 'git add .'
+                        bat 'git commit -m \'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'
+                        bat 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main'
       }
     }
   }
